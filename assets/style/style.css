@@ -28,7 +28,7 @@ b
 .image,
 .footer
 {
-    max-width: 1024px;
+    max-width: 75%;
     color: #fff;
     text-align: center;
     font-family: 'Open Sans', Lato, sans-serif;
@@ -36,7 +36,6 @@ b
 }
 
 .text{
-    max-width: 1024px;
     color: #fff;
     text-align: left;
     font-family: 'Open Sans', Lato, sans-serif;
@@ -112,6 +111,10 @@ section p {
     margin-right: 5px;
     text-align: left;
 }
+section ul {
+    text-align: left;
+}
+
 section {
     margin-bottom: 40px;
 }
@@ -138,4 +141,58 @@ footer li a:hover {
 	background:#7f66ae;	
 	cursor:pointer;
 }
+/* Gallery stuff */
 
+.gallery
+{
+    display: inline-block;
+    max-width: 100%;
+}
+ul.gallery {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+}
+ul.gallery li {
+	display: inline-block;
+	padding: 3px;
+	margin: 0 0 2.5% 2.5%;
+	background: #fff;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-shadow: 0 0 5px #ddd;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.gallery li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+}
+ul.gallery li h3 {
+	margin: 0;
+}
+
+ul.gallery.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+ 
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.gallery {
+		margin-left: 0;
+	}
+	ul.gallery li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0;
+	}
+}

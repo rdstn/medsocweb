@@ -1,0 +1,90 @@
+<!--Pattern HTML-->
+<!doctype html>
+<html>
+<head>
+    <title>Medieval Society</title>
+    <meta name="description" content="Information about the Medieval Society at the University of York.">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, width=device_width, user-scalable=yes">
+    <meta name="author" content="Radostin Nanov">
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+<style type="text/css">
+    a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+    } 
+    a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
+    }
+</style>
+</head>
+<div class="main"> <header>
+    <nav>
+    <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="swordclash.html">SwordClash</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+    </ul>
+    </nav>
+    <div class="image">
+        <img src="assets/images/Heraldric.png" alt="Richard the Third Heraldic Charge">
+    </div>
+    </header>
+
+    <div id="gallery" class="gallery">
+    <ul class="gallery columns-3">
+        <li><img class="fancybox" src="assets/images/tournament14awards.jpg" title="The awards for our 2014 tournament."/></li>
+        <li><img class="fancybox" src="assets/images/tournament14YSTV.jpg" title="Working together with YSTV."/></li>
+        <li><img class="fancybox" src="assets/images/fundandgames.jpg" title="Handcrafted traditional tabletop games."/></li>
+        <li><img class="fancybox" src="assets/images/feastdance.jpg" title="Dancing at Bedern hall, Christmas feast 2014"/></li>
+        <li><img class="fancybox" src="assets/images/feastdrink.jpg" title="Bedern hall, Christmas feast 2014"/></li>
+        <li><img class="fancybox" src="assets/images/feastgroup.jpg" title="Group picture from the Christmas feast 2014"/></li>
+        <li><img class="fancybox" src="assets/images/tournament14contestants.jpg" title="A group photo for some of our tournament 2014 contestants"/></li>
+        <li><img class="fancybox" src="assets/images/tournament14equipment.jpg" title="Period equipment on display at the 2014 tournament."/></li>
+        <li><img class="fancybox" src="assets/images/freshersfair14.jpg" title="The Medieval society at Freshers fair 2014"/></li>
+        <li><img class="fancybox" src="assets/images/feasthats.jpg" title="A collection of hats from the Christmas feast 2014"/></li>
+        <li><img class="fancybox" src="assets/images/tournament14food.jpg" title="Our food tent at tournament 2014."/></li>
+        <li><img class="fancybox" src="assets/images/tournament14judge.jpg" title="Referee at the 2014 tournament."/></li>
+        <li><img class="fancybox" src="assets/images/tournament14handshake.jpg" title="James Morel, overall top contestant at tournament 2014 with Andy Jarvis."/></li>
+        <li><img class="fancybox" src="assets/images/tournament14physics.jpg" title="Distortion!"/></li>
+        <li><img class="fancybox" src="assets/images/tournament14piggy.jpg" title="The guest of honour at our tournament 2014."/></li>
+        <li><img class="fancybox" src="assets/images/carnival13.jpg" title="The Medieval Society demonstration at the York Carnival in June 2013."/></li>
+    </ul>
+    </div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+<script type="text/javascript">
+    $(function($){
+        var addToAll = false;
+        var gallery = true;
+        var titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+            var $this = $(this);
+            var title = $this.attr('title');
+            var src = $this.attr('data-big') || $this.attr('src');
+            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery)
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+    $.noConflict();
+</script>
+</div>
+<footer>
+    <ul>
+        <li><a href="https://www.yusu.org/">YUSU</a></li>
+        <li><a href="https://www.facebook.com/groups/129388142381/">Facebook Group</a></li>
+        <li><a href="https://www.facebook.com/medsocyork">Facebook Page</a></li>
+        <li><a href="https://twitter.com/MedievalsocYork">Twitter</a></li>
+        <li><a href="mailto:medieval@yusu.org?Subject=Website%20contact" target="_top">Mail</a></li>
+        <li>me fecit R.N. 2015</li>
+    </ul>
+</footer>
